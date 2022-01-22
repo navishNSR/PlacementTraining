@@ -1,0 +1,143 @@
+Q1.Find out below switch statement output.
+Code:
+public static void main(String a[]){
+	int price = 6;
+	switch (price) {
+		case 2: System.out.println("It is: 2");
+		default: System.out.println("It is: default");
+		case 5: System.out.println("It is: 5");
+		case 9: System.out.println("It is: 9");
+	}
+}
+
+Answer: 
+It is: default
+It is: 5
+It is: 9
+____________________________________________________________________________________________
+Q2.Rewrite the following program code using suitable ‘if’ command.
+switch(m){
+case 0:
+ x=x+2;
+ System.out.println(“X=” x);
+ break;
+case 1:
+ x=x+4;
+ System.out.println(“X=” x);
+ break;
+case 2:
+ x=x+6;
+ System.out.println(“X=” x);
+ break; 
+}
+
+Answer:
+class prog2{
+         public static void main(String args[]){
+              int x=0;
+              int m=1;
+              if(m==0){
+                     x+=2;
+                     System.out.println("X=" +x);
+                   }
+              else if(m==1){
+                     x+=4;
+                     System.out.println("X=" +x);
+                   }
+              else{
+                     x+=6;
+                     System.out.println("X=" +x);
+                   }
+   }
+}
+________________________________________________________________________________________________
+Q3.Give the output of the following code fragment when
+(i) opn = ‘b’
+(ii) opn = ‘x’
+
+switch (opn)
+{
+case ‘a’:
+System.out.println(“Simply Coding”);
+break;
+case ‘b’:
+System.out.println(“Online Tutor”);
+case ‘c’:
+System.out.println(“Online Courses”);
+default:
+System.out.println(“Invalid Input”);
+}
+
+Answer:
+(i) Online Tutor
+    Online Courses
+    Invalid Input
+
+(ii) Invalid Input
+________________________________________________________________________________________________
+Q4.What is wrong in the following program code? Find any 2 errors and explain.
+switch (p)
+?
+case 3:
+ int x= 12; int y = 35;
+ int z= x* y;
+ break;
+case 3:
+ int a = 20;
+ int b = 76;
+ break;
+ int z=x * y;
+
+Answer:
+(i) No two cases can be of same name.
+(ii) Parantheses should be there in place of ?
+_______________________________________________________________________________________________
+
+Q5.Given an integer choice denoting the choice of the user and a list containing the single value R or two values L and B depending on the choice.
+If the user's choice is 1, calculate the area of the circle having the given radius(R).  
+Else if choice is 2, calculate the area of the rectangle with given length(L) and breadth(B).
+
+For example:-
+Input: 
+choice = 1, 
+R = 5
+Output: 78.53981633974483
+Explaination: The choice is 1. 
+So we have to calculate the area of the circle.
+
+Input: 
+choice = 2, 
+L = 5, B = 10
+Output: 50
+Explaination: Here we have to calculate the 
+area of the rectangle.
+
+You need to read input  and write a program using switchCase() which takes choice and the single value R or the two values L and B, as input parameters. It should return area of the desired geomatrical figure.
+Note: Use Math.PI for the value of pi.
+
+Answer:
+
+import java.lang.Math.*;
+import java.util.*;
+class prog3{
+       public static void main(String args[]){
+            System.out.println("Type Choice: ");
+            Scanner sc= new Scanner(System.in);
+            int choice=sc.nextInt();
+switch(choice)
+{
+case 1:{
+int R=5;
+double area1=Math.PI*R*R;
+System.out.println("Area of Circle is: "+area1);
+break;
+}
+case 2:{
+int L=5, B=10;
+int area2=L*B;
+System.out.println("Area of Rectangle is: "+area2);
+break;
+}
+}
+}
+}
